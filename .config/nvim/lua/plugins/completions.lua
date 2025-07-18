@@ -73,5 +73,17 @@ return {
             "saadparwaiz1/cmp_luasnip",
             "rafamadriz/friendly-snippets",
         },
+    },
+    {
+        'github/copilot.vim',
+        tag = '0.1.8',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+            'nvim-tree/nvim-web-devicons'
+        },
+        config = function()
+            vim.g.copilot_node_command = "/cb/home/shahmeera/bin/node-v23.4.0-linux-x64-glibc-217/bin/node"
+        end
     }
 }
